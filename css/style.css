@@ -26,6 +26,13 @@
 
 .foot {
     grid-area: ftr;
+    display: flex;
+    border-top: 5px solid #861583;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ca67b0;
+    justify-content: center;
 }
 
 .title {
@@ -33,7 +40,7 @@
     justify-content: start;
     margin: 50px;
     padding: 20px;
-    color: burlywood;
+    color: #e4c9a6;
     font-family: monospace;
     border-radius: 20px;
     border-bottom: 2px solid white;
@@ -59,10 +66,90 @@ ul {
 }
 
 ul>li {
-    background-color: bisque;
+    background-color: #dca6e2;
     border: 10px;
     border-radius: 15px;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+}
+
+article {
+    border-radius: 20px;
+    background-color: mediumpurple;
+    padding: 50px;
+    margin: 50px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+article>h1 {
+    color: #311405;
+}
+
+h1,
+h2,
+h3 {
+    background-color: mediumpurple;
+    color: #e4c9a6;
+}
+
+p {
+    background-color: mediumpurple;
+}
+
+.imgflw {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ca67b0;
+    padding: 10px;
+    padding-right: 170px;
+    ;
+}
+
+.copyr {
+    background-color: #ca67b0;
+}
+
+.box {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    border: 5px solid #bd6cad;
+    border-radius: 20px;
+    font-size: large;
+    align-items: start;
+    background-color: #dca6e2;
+    border-style: outset;
+}
+
+.box>h1,
+h2,
+h3 {
+    color: #311405;
+}
+
+.foot>h1,
+h2,
+h3 {
+    color: #311405;
+}
+
+#one {
+    order: 1;
+    padding: 20px;
+    margin: 20px;
+}
+
+#two {
+    order: 2;
+    padding: 20px;
+    margin: 20px;
+}
+
+#three {
+    order: 3;
+    padding: 20px;
+    margin: 20px;
 }
