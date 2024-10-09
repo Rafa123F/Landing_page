@@ -27,11 +27,12 @@
 .foot {
     grid-area: ftr;
     display: flex;
-    border-top: 5px solid #861583;
+    border-top: 5px solid #691c61;
+    border-left: 5px solid #691c61;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
-    background-color: #ca67b0;
+    background-color: #a584e7;
     justify-content: center;
 }
 
@@ -40,11 +41,12 @@
     justify-content: start;
     margin: 50px;
     padding: 20px;
-    color: #e4c9a6;
+    color: #8a2020;
     font-family: monospace;
     border-radius: 20px;
-    border-bottom: 2px solid white;
+    border-bottom: 7px solid #861583;
     font-size: 50px;
+    background-color: #a584e7;
 }
 
 nav {
@@ -67,7 +69,8 @@ ul {
 
 ul>li {
     background-color: #dca6e2;
-    border: 10px;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
     border-radius: 15px;
     padding: 10px;
     margin: 5px;
@@ -75,8 +78,10 @@ ul>li {
 }
 
 article {
+    border-bottom: 5px solid;
+    border-right: 5px solid;
     border-radius: 20px;
-    background-color: mediumpurple;
+    background-color: #a584e7;
     padding: 50px;
     margin: 50px;
     font-size: 20px;
@@ -90,38 +95,42 @@ article>h1 {
 h1,
 h2,
 h3 {
-    background-color: mediumpurple;
+    background-color: #a584e7;
     color: #e4c9a6;
 }
 
 p {
-    background-color: mediumpurple;
+    background-color: #a584e7;
 }
 
 .imgflw {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #ca67b0;
+    background-color: #a584e7;
     padding: 10px;
     padding-right: 170px;
     ;
 }
 
 .copyr {
-    background-color: #ca67b0;
+    background-color: #a584e7;
 }
 
 .box {
     display: flex;
     width: 200px;
     height: 300px;
-    border: 5px solid #bd6cad;
+    border-top: 3px solid #691c61;
+    border-left: 3px solid #691c61;
+    border-bottom: 0px;
+    border-right: 0px;
     border-radius: 20px;
     font-size: large;
     align-items: start;
-    background-color: #dca6e2;
+    background-color: #caade28a;
     border-style: outset;
+    color: #8a2020;
 }
 
 .box>h1,
@@ -139,17 +148,17 @@ h3 {
 #one {
     order: 1;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
 #two {
     order: 2;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
 #three {
     order: 3;
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
 }
