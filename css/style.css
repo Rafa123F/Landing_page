@@ -131,34 +131,20 @@ p {
     background-color: #caade28a;
     border-style: outset;
     color: #8a2020;
+    padding: 20px;
+    margin: 10px;
 }
 
 .box>h1,
 h2,
 h3 {
     color: #311405;
+    background-color: #a584e7;
 }
 
 .foot>h1,
 h2,
 h3 {
     color: #311405;
-}
-
-#one {
-    order: 1;
-    padding: 20px;
-    margin: 10px;
-}
-
-#two {
-    order: 2;
-    padding: 20px;
-    margin: 10px;
-}
-
-#three {
-    order: 3;
-    padding: 20px;
-    margin: 10px;
+    background-color: #a584e7;
 }
