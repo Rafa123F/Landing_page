@@ -13,11 +13,11 @@ myNav.classList.add("nav");
 
 //map my array menu to the new nav section i created
 myNav.innerHTML = `
-<ul>
-<li>${arrMenus[0]}</li>
-<li>${arrMenus[1]}</li>
-<li>${arrMenus[2]}</li>
-<li>${arrMenus[3]}</li>
+<ul id="myDIV">
+<li class="btn">${arrMenus[0]}</li>
+<li class="btn active">${arrMenus[1]}</li>
+<li class="btn">${arrMenus[2]}</li>
+<li class="btn">${arrMenus[3]}</li>
 </ul>
 `
 //check if it's working correctly
@@ -27,9 +27,61 @@ console.log(myNav);
 myMenu.appendChild(myNav);
 
 
+// click event
+const _sec = document.querySelectorAll("li");
+let header = document.getElementById("myDIV");
+let btns = header.getElementsByClassName("btn");
+
+for (let i = 0; i < _sec.length; i++) {
+    _sec[i].addEventListener('click', function () {
+        if (this.textContent == "section 1") {
+            let element = document.querySelector("#sec1");
+            element.scrollIntoView({ behavior: 'smooth' });
+
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+
+        }
+        else if (this.textContent == "section 2") {
+            let element = document.querySelector("#sec2");
+            element.scrollIntoView({ behavior: 'smooth' });
+
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        }
+        else if (this.textContent == "section 3") {
+            let element = document.querySelector("#sec3");
+            element.scrollIntoView({ behavior: 'smooth' });
+
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        }
+        else {
+            let element = document.querySelector("#sec4");
+            element.scrollIntoView({ behavior: 'smooth' });
+
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        }
+    })
+}
+
+// for (let i = 0; i < btns.length; i++) {
+//     btns[i].addEventListener("click", function () {
+//         let current = document.getElementsByClassName("active");
+//         current[0].className = current[0].className.replace(" active", "");
+//         this.className += " active";
+//     });
+// }
+
+
 
 // create some cards in the footer
-const addfoot= document.querySelector('.foot');
+const addfoot = document.querySelector('.foot');
 
 //create an array contain the details of the cards
 const myCards = [
@@ -46,7 +98,7 @@ const myCards = [
     {
         detail1: 'My blog website',
         detail2: 'Galary',
-        detail3: 'Copyright 2024' 
+        detail3: 'Copyright 2024'
     }
 ];
 
@@ -55,7 +107,7 @@ function creatCards(card) {
 
     const myh3 = document.createElement('h3');
     myh3.classList.add("box");
-    myh3.innerHTML=`
+    myh3.innerHTML = `
     ${card.detail1}</br>
     ${card.detail2} </br>
     ${card.detail3}
@@ -64,4 +116,6 @@ function creatCards(card) {
 }
 //use forEach loop to print out the function result for each cards in html
 myCards.forEach(creatCards);
+
+
 
