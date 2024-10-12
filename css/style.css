@@ -20,15 +20,28 @@
     grid-area: hdr;
     overflow: hidden;
     /*background-color: #333;*/
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
+    margin-bottom: -190px;
+}
+
+.head ul{
+    margin: 0;
+    padding: 12px;
+    gap: 30px;
+    color: brown;
+}
+
+.head ul li{
+    display: inline;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .main {
     grid-area: main;
-    padding: 16px;
-    margin-top: 30px;
+    /* padding: 16px;
+    margin-top: 30px; */
 }
 
 .foot {
@@ -46,7 +59,10 @@
 .title {
     display: flex;
     justify-content: start;
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding: 20px;
     color: #8a2020;
     font-family: monospace;
@@ -63,17 +79,17 @@ nav {
     font-weight: bold;
     padding: 5px;
     margin-right: 50px;
-    margin-top: -50px;
+    /*margin-top: -50px;*/
+    text-align: end;
 }
 
-ul {
+/* ul {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 30px;
-    color: brown;
-}
+   
+} */
 
 .btn {
     background-color: #dca6e2;
@@ -84,13 +100,27 @@ ul {
     margin: 5px;
     cursor: pointer;
 }
-#sec1{
-    margin-bottom: 50px;
-}
-.active, .btn:hover {
+
+.active,
+.btn:hover {
     background: #ddd;
     color: black;
-  }
+}
+
+.padd{
+    padding-top: 200px;
+}
+
+.bigFont {
+    font-size: 50px;
+    background-color: blueviolet;
+    font-family: system-ui;
+    /* padding: 20px; */
+    margin: 20px;
+    padding-top: 20px;
+    padding-left: 25px;
+    text-decoration: underline;
+}
 
 article {
     border-bottom: 5px solid;

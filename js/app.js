@@ -1,4 +1,7 @@
 
+const head1 =document.querySelector("head");
+let rect= head1.getBoundingClientRect();
+
 // create a new array for menu
 const arrMenus = ['section 1', 'section 2', 'section 3', 'section 4'];
 
@@ -69,16 +72,6 @@ for (let i = 0; i < _sec.length; i++) {
         }
     })
 }
-
-// for (let i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", function () {
-//         let current = document.getElementsByClassName("active");
-//         current[0].className = current[0].className.replace(" active", "");
-//         this.className += " active";
-//     });
-// }
-
-
 
 // create some cards in the footer
 const addfoot = document.querySelector('.foot');
