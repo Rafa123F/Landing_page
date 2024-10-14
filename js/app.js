@@ -130,7 +130,7 @@ const myCards = [
         detail3: 'Facebook'
     },
     {
-        detail1: 'My blog website',
+        detail1: 'Landing Page',
         detail2: 'Galary',
         detail3: 'Copyright 2024'
     }
