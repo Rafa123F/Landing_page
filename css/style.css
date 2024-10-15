@@ -25,14 +25,14 @@
     margin-bottom: -190px;
 }
 
-.head ul{
+.head ul {
     margin: 0;
     padding: 12px;
     gap: 30px;
     color: brown;
 }
 
-.head ul li{
+.head ul li {
     display: inline;
     margin: 0 10px;
     text-decoration: none;
@@ -107,7 +107,7 @@ nav {
     color: black;
 }
 
-.padd{
+.padd {
     padding-top: 200px;
 }
 
@@ -192,4 +192,106 @@ h2,
 h3 {
     color: #311405;
     background-color: #a584e7;
+}
+
+
+@media (min-width: 769px) and (max-width:900px) {
+    .imgflw {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: #a584e7;
+        padding: 10px;
+        /* padding-right: 170px; */
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+
+    .title {
+        display: flex;
+        justify-content: start;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
+        color: #8a2020;
+        font-family: monospace;
+        border-radius: 20px;
+        border-bottom: 7px solid #861583;
+        font-size: 50px;
+        background-color: #a584e7;
+    }
+
+    nav {
+        border-radius: 30px;
+        font-family: cursive;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        width: 70vh;
+        display: flex;
+    }
+
+    article {
+        border-bottom: 5px solid;
+        border-right: 5px solid;
+        border-radius: 20px;
+        background-color: #a584e7;
+        padding: 30px;
+        margin: 20px;
+        font-size: 20px;
+        font-family: cursive;
+    }
+
+    .foot {
+        grid-area: ftr;
+        display: flex;
+        border-top: 5px solid #691c61;
+        border-left: 5px solid #691c61;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #a584e7;
+        justify-content: center;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    .imgflw {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        background-color: #a584e7;
+        padding: 5px;
+    }
+
+    .copyr {
+        background-color: #a584e7;
+        font-size: 17px;
+    }
+
+    .box {
+        display: flex;
+        width: 200px;
+        height: 300px;
+        border-top: 3px solid #691c61;
+        border-left: 3px solid #691c61;
+        border-bottom: 0px;
+        border-right: 0px;
+        border-radius: 20px;
+        font-size: 16px;
+        align-items: start;
+        background-color: #caade28a;
+        border-style: outset;
+        color: #8a2020;
+        padding: 10px;
+        margin: 5px;
+    }
+
 }

@@ -1,73 +1,42 @@
+//to create our menu , we should map it to the sections in the html
+const sections = document.querySelectorAll("section");
+// we use a loop to create our list items according to the sections attribute
+sections.forEach(function (section) {
 
-const head1 = document.querySelector("head");
-let rect = head1.getBoundingClientRect();
+    let id = section.getAttribute("id");
+    let content = section.dataset.name;
+    const list = document.querySelector("#menu");
+    const item = document.createElement('li');
+   
+    item.classList.add("btn");
+    item.innerHTML = `${content}`;//<li> Section 1</li>
+    item.dataset.name = id; //<li data-name="sec1"> Section 1</li>
 
-// create a new array for menu
-const arrMenus = ['section 1', 'section 2', 'section 3', 'section 4'];
-
-//search for an id #menus from my html document
-const myMenu = document.querySelector('#menus');
-
-// creat a new nav section for my html document
-const myNav = document.createElement('nav');
-
-//attach it to class
-myNav.classList.add("nav");
-
-//map my array menu to the new nav section i created
-myNav.innerHTML = `
-<ul id="myList">
-<li name="sec1" class="btn">${arrMenus[0]}</li>
-<li name="sec2" class="btn active">${arrMenus[1]}</li>
-<li name="sec3" class="btn">${arrMenus[2]}</li>
-<li name="sec4" class="btn">${arrMenus[3]}</li>
-</ul>
-`
-//check if it's working correctly
-console.log(myNav);
-
-//map it to myMenu
-myMenu.appendChild(myNav);
-
+    list.appendChild(item);
+})
+// set first Active class
+const firstLi= document.querySelector("li");
+let firstActive=firstLi.classList.add("active");
 
 // for click event we take all nav items
-const _sec = document.querySelectorAll("li");
-//use a loop to creat a click event foe each 
+const _Item = document.querySelectorAll("li");
+const _sec= document.querySelectorAll("section");
+
+//use a loop to creat a click event for each one 
 for (let i = 0; i < _sec.length; i++) {
-    _sec[i].addEventListener('click', function () {
+    _Item[i].addEventListener('click', function (event) {
+
         //set a condition to check the item in the list and map it to it's section
-        // and activate the current element to active class
-        if (this.textContent == "section 1") {
-            let element = document.querySelector("#sec1");
-            element.scrollIntoView({ behavior: 'smooth' });
-            
-            let current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
+        let sec_name=_sec[i].getAttribute("data-name");
 
-        }
-        else if (this.textContent == "section 2") {
-            let element = document.querySelector("#sec2");
-            element.scrollIntoView({ behavior: 'smooth' });
-           
-            let current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-
-        }
-        else if (this.textContent == "section 3") {
-            let element = document.querySelector("#sec3");
+        if (this.textContent == sec_name) {
+            event.preventDefault();
+            let sId = _sec[i].getAttribute("id");
+            console.log(sId);
+            let element =document.querySelector(`#${sId}`);
             element.scrollIntoView({ behavior: 'smooth' });
 
-            let current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        }
-        else {
-
-            let element = document.querySelector("#sec4");
-            element.scrollIntoView({ behavior: 'smooth' });
-
+            // and activate the current element to active class
             let current = document.getElementsByClassName("active");
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
@@ -103,7 +72,7 @@ document.addEventListener('scroll', function () {
              const id = section.getAttribute("id");
              //check if it's catch the id correctly
              console.log(id);
-             const activeL = document.querySelector(`li[name="${id}"]`);
+             const activeL = document.querySelector(`li[data-name="${id}"]`);
              //use a setActive() function to set the active class
              setActive(activeL);
 
