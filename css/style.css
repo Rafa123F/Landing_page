@@ -230,10 +230,32 @@ h3 {
         font-family: cursive;
         font-size: 14px;
         font-weight: bold;
-        padding: 20px;
+        padding: 10px;
         text-align: center;
         width: 70vh;
         display: flex;
+    }
+
+    .head ul {
+        margin: 0;
+        padding: 12px;
+        color: brown;
+    }
+
+    .head ul li {
+        display: inline;
+        margin: 2px; 
+        text-decoration: none;
+    }
+
+    .btn {
+        background-color: #dca6e2;
+        border-bottom: 5px solid;
+        border-right: 5px solid;
+        border-radius: 15px;
+        padding: 8px;
+        margin: 2px;
+        cursor: pointer;
     }
 
     article {
@@ -253,14 +275,14 @@ h3 {
         border-top: 5px solid #691c61;
         border-left: 5px solid #691c61;
         border-radius: 20px;
-        padding: 10px;
-        margin: 10px;
+        padding: 5px;
+        margin: 0px;
         background-color: #a584e7;
         justify-content: center;
     }
 
     img {
-        width: 100px;
+        width: 80px;
     }
 
     .imgflw {
@@ -278,19 +300,19 @@ h3 {
 
     .box {
         display: flex;
-        width: 200px;
-        height: 300px;
+        width: 100px;
+        height: 230px;
         border-top: 3px solid #691c61;
         border-left: 3px solid #691c61;
         border-bottom: 0px;
         border-right: 0px;
         border-radius: 20px;
-        font-size: 16px;
+        font-size: 14px;
         align-items: start;
         background-color: #caade28a;
         border-style: outset;
         color: #8a2020;
-        padding: 10px;
+        padding: 7px;
         margin: 5px;
     }
 
