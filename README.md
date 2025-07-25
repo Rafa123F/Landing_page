@@ -3,6 +3,10 @@ is a project that contain a several sections , the sections contain a brief para
 it's also have a navigation bar of these sections ,
 you can use the list on the nav bar to check each section by clicking the items you want to view.
 
+
+![Screenshot of Landing Page Website](img/screenshot.png)
+
+
 the index page contain a header, main and footer parts
 in the header we have a title: 
 
